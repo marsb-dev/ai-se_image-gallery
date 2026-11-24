@@ -175,7 +175,7 @@ button:disabled {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  grid-template-areas: "left-btn card right-btn";
+  grid-template-areas: "left-btn . right-btn";
 }
 
 .carousel__btn {
@@ -232,8 +232,8 @@ button:disabled {
 
 .carousel__image {
   grid-area: card;
-  width: 390px;
-  height: 273px;
+  max-width: 390px;
+  width: 100%;
   border-radius: 16px;
   display: block;
 }
