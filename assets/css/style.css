@@ -159,9 +159,9 @@ button:disabled {
   display: contents;
 }
 
-.carousel {
-  padding: 100px 0;
-}
+/* .carousel {
+} */
+/* No styles for the carousel section for now. */
 
 .carousel__title {
   font-weight: 700;
@@ -175,7 +175,7 @@ button:disabled {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  grid-template-areas: "left-btn . right-btn";
+  grid-template-areas: "left-btn card right-btn";
 }
 
 .carousel__btn {
@@ -232,8 +232,8 @@ button:disabled {
 
 .carousel__image {
   grid-area: card;
-  max-width: 390px;
   width: 100%;
+  max-width: 390px;
   border-radius: 16px;
   display: block;
 }
@@ -271,6 +271,15 @@ button:disabled {
   .carousel__title {
     font-size: 32px;
     margin-bottom: 20px;
+  }
+
+  .carousel__grid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+      "card card card"
+      "left-btn . right-btn";
   }
 }
 
