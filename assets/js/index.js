@@ -4,6 +4,24 @@ import { renderCarouselView } from "./carousel.js";
 const homeSection = document.querySelector("#home");
 const carouselSection = document.querySelector("#carousel");
 const notFoundSection = document.querySelector("#not-found");
+const modal = document.querySelector("#confirmation-modal");
+const cancelBtn = modal.querySelector(".modal__btn_type_cancel");
+const confirmBtn = modal.querySelector(".modal__btn_type_confirm");
+
+let imageToDelete = null;
+
+cancelBtn.addEventListener("click", () => {
+  imageToDelete = null;
+  modal.classList.remove("modal_visible");
+});
+
+confirmBtn.addEventListener("click", () => {
+  if (imageToDelete) {
+    imageToDelete.remove();
+    imageToDelete = null;
+  }
+  modal.classList.remove("modal_visible");
+});
 
 function renderHomeView() {
   homeSection.style.display = "block";
@@ -28,7 +46,8 @@ function renderHomeView() {
 
     const deleteBtn = cloneEl.querySelector(".gallery__btn_type_delete");
     deleteBtn.addEventListener("click", () => {
-      cloneEl.remove();
+      imageToDelete = cloneEl;
+      modal.classList.add("modal_visible");
     });
 
     return cloneEl;

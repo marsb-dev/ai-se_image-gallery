@@ -72,10 +72,6 @@ button:disabled {
 
 .gallery {
   padding-bottom: 60px;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(min(325px, 100%), max(353px))
-  );
 }
 
 .gallery__title {
@@ -94,6 +90,8 @@ button:disabled {
 
 .gallery__image {
   width: 100%;
+  max-width: 325px;
+  max-height: 224px;
   border-radius: 12px;
   display: block;
 }
@@ -151,6 +149,10 @@ button:disabled {
 
 .wrapping-row {
   display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(325px, 100%), 325px)
+  );
   justify-content: center;
   gap: 18px 20px;
 }
@@ -280,12 +282,6 @@ button:disabled {
     grid-template-areas:
       "card card card"
       "left-btn . right-btn";
-  }
-}
-
-@media (min-width: 800px) {
-  .wrapping-row {
-    grid-template-columns: repeat(auto-fill);
   }
 }
 

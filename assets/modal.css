@@ -1,12 +1,15 @@
-.div.modal {
+div.modal {
   inset: 0;
+  position: fixed;
   background-color: #d9d9d980;
-}
-
-.modal {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+div.modal.modal_visible {
+  visibility: visible;
 }
 
 .modal__container {
