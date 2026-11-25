@@ -16,7 +16,7 @@ button:disabled {
 }
 
 .page {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   color: #1a1a1a;
   background-color: #ececec;
   max-width: 1440px;
@@ -149,10 +149,7 @@ button:disabled {
 
 .wrapping-row {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(325px, 100%), 325px)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 325px));
   justify-content: center;
   gap: 18px 20px;
 }
